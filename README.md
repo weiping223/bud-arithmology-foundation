@@ -1,3 +1,4 @@
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22724415.svg)](https://doi.org/10.5281/zenodo.22724415)
 # Bud Arithmology: A Set-Theoretic Foundation via Germs and Projection
 
 > **Status:** exploratory draft · open to criticism · not a claim of consistency proof
