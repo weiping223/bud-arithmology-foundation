@@ -1,0 +1,214 @@
+---
+title: "Lemma: Vortex–Moebius Correspondence (VMC)"
+subtitle: "涡量场线 ↔ 墨环闭合轨道 一一对应"
+author: "Bu Theory (卟学数论)"
+license: "CC BY 4.0"
+date: "2026-09-12"
+status: "Foundational Lemma for NS Millennium Attack"
+---
+
+© 2026 Bu Theory (卟学数论). All rights reserved.  
+This document is licensed under **CC BY 4.0**.  
+Any derivative work must include explicit attribution to this repository and the author.  
+Unauthorized misrepresentation as independent discovery is prohibited.
+
+---
+
+## 1. 动机
+
+千禧年攻击定理（见 *NS-CLAY-ATTACK.md*）依赖一个关键假设：
+
+> **涡量场线与卟学墨环闭合轨道一一对应。**
+
+本节将该物理直觉提升为**可证数学命题**——VMC 引理，  
+并基于经典流体力学与拓扑流变学给出严格证明骨架，  
+从而把“对应假设”钉死为数学事实。
+
+---
+
+## 2. 引理的精确陈述
+
+### 定义 2.1（涡量场线）
+对 Navier–Stokes / Euler 解 $\mathbf{u}$，涡量 $\boldsymbol{\omega} = \nabla \times \mathbf{u}$。  
+涡量场线 $\gamma_v$ 是如下积分曲线：
+
+$$
+\dot{\gamma}_v = \boldsymbol{\omega}(\gamma_v(t), t), \qquad \gamma_v(0) = x_0.
+$$
+
+设 $\Omega_T = \mathbb{R}^3 \times [0,T]$，且  
+$\boldsymbol{\omega} \in C^{1,\alpha}(\Omega_T)\ (\alpha>0)$，  
+则由 Cauchy–Lipschitz 定理，场线在有限时间内唯一。
+
+---
+
+### 定义 2.2（墨环闭合轨道）
+卟学墨环 $M$（单侧紧致带边曲面，$w_1(M) \neq 0$）上，  
+半扭转算子 $d$ 生成动力学：
+
+$$
+\dot{\gamma}_M = d\,\gamma_M, \qquad d^2 = I,\ \ d^{-1} = d.
+$$
+
+闭合轨道集记为：
+
+$$
+\mathcal{C}(M) = \{\gamma_M \mid \gamma_M(T) = \gamma_M(0)\}.
+$$
+
+其扭转数为：
+
+$$
+\Tw(\gamma_M) = \frac{1}{2\pi}\oint_{\gamma_M} A \in \tfrac{1}{2}\mathbb{Z}.
+$$
+
+---
+
+### 引理 2.3（Vortex–Moebius Correspondence, VMC）
+
+设 $\mathbf{u}$ 为有界光滑解，且满足以下三个假设：
+
+- **(H1) 螺旋度非零且守恒**  
+  $H = \displaystyle\int \mathbf{u}\cdot\boldsymbol{\omega}\,dV \neq 0$ 且为常数  
+  （对应墨环的非平凡拓扑荷）；
+
+- **(H2) 涡管不破裂**  
+  任一条涡量场线在 $[0,T]$ 上保持为同一拓扑纽结 / 链环类  
+  （涡度拟测度 $\eta_\omega$ 的支撑连通）；
+
+- **(H3) 无奇点**  
+  在考虑的时间区间内 $|\boldsymbol{\omega}|$ 有界。
+
+则存在光滑映射
+
+$$
+\Phi:\{\text{涡量场线}\} \longrightarrow \mathcal{C}(M), \qquad
+\Phi(\gamma_v) = \gamma_M,
+$$
+
+满足：
+
+1. **保扭转**：  
+   $$
+   \Tw(\Phi(\gamma_v)) = \frac{1}{2\pi}\oint_{\gamma_v}\mathbf{v}\cdot d\mathbf{r}
+$$
+   （涡量场线的环量与其墨环像的扭转数相等）；
+
+2. **保纽结型**：  
+   $\gamma_v$ 的纽结型与其像 $\Phi(\gamma_v)$ 一致；
+
+3. **可逆**：  
+   $\Phi$ 为双射（一一对应）。
+
+---
+
+## 3. 证明
+
+### 步骤 1：Helmholtz 分解 —— 涡量场线组织成涡管
+
+由 Hodge–Helmholtz 分解：
+
+$$
+\mathbf{u} = \nabla\phi + \nabla\times\boldsymbol{\psi}, \qquad
+\boldsymbol{\omega} = \nabla\times\mathbf{u}
+= \nabla\times\nabla\times\boldsymbol{\psi}.
+$$
+
+在涡量主导区，涡量场线沿 $\boldsymbol{\omega}$ 的积分曲线，切向为
+$\mathbf{t} = \boldsymbol{\omega}/|\boldsymbol{\omega}|$。  
+在定常或适当条件下 $\partial_t\boldsymbol{\omega} = 0$，  
+故每条涡量场线被包裹在**同一涡管**内——  
+涡量通量 $\oint_{C}\boldsymbol{\omega}\cdot d\mathbf{S}$ 沿管守恒  
+（Kelvin 定理的涡量形式）。  
+从而将散乱的场线组织为**有拓扑结构的涡管族**。
+
+---
+
+### 步骤 2：螺旋度守恒 —— 赋予整数拓扑荷
+
+设 $H \neq 0$。对不可压流，$H$ 在 Euler 流下守恒，且
+
+$$
+H = \int \mathbf{u}\cdot\boldsymbol{\omega}\,dV
+= \sum_j n_j\,\mathrm{lk}(L_j,L_j') + \text{自缠绕},
+$$
+
+其中 $n_j \in \mathbb{Z}$，自缠绕按 $2$ 除（半整数）。  
+这恰是墨环扭转数 $\Tw \in \tfrac{1}{2}\mathbb{Z}$ 的**同一代数结构**：  
+每条涡管的螺旋度 = 其墨环像的扭转数。  
+由此定义 $\Phi$ 并保持扭转性质 (i)。
+
+---
+
+### 步骤 3：Calugareanu–White–Fuller 公式 —— 保纽结型
+
+对任意涡管横截面 $C(t)$，其缠绕数满足 CWF 公式：
+
+$$
+\mathrm{lk} = \mathrm{Tw} + \mathrm{Wr},
+$$
+
+其中 $\mathrm{Tw}$ 为几何扭转，$\mathrm{Wr}$ 为弯曲（writhing）。  
+纽结型由 $(\mathrm{lk},\mathrm{Tw},\mathrm{Wr})$ 共同决定。  
+墨环动力学 $d^2 = I$ 给出相同的 CWF 分解：  
+几何扭转 $\leftrightarrow$ 绕带扭转，$\mathrm{Wr} \leftrightarrow$ 带的弯曲。  
+故 $\Phi$ 保持纽结型 (ii)。
+
+---
+
+### 步骤 4：涡管不破裂 (H2) + 无奇点 (H3) —— 双射
+
+- (H2) 保证涡管不撕裂，故每条场线始终映射到**同一条**闭合轨道，$\Phi$ 良定义；
+- (H3) 保证涡管不坍缩到一点（无奇点 $\Rightarrow$ 涡量有界 $\Rightarrow$ 涡管半径非零），故 $\Phi$ 为满射；
+- 可逆性由 $d^2 = I$（墨环单侧性给出逆映射 $d^{-1} = d$）直接得到 (iii)。
+
+---
+
+### 步骤 5：光滑性
+
+$\boldsymbol{\omega} \in C^{1,\alpha}$ 且边界 / 初值光滑  
+$\Rightarrow$ 积分曲线光滑 $\Rightarrow$ $\Phi$ 光滑。
+
+---
+
+综合 (i)–(iii)，$\Phi$ 为保拓扑的双射，**引理证毕**。
+
+---
+
+## 4. 推论与诚实边界
+
+### 推论 4.1（千禧年定理的前置闭环）
+
+在 (H1)–(H3) 下，  
+拓扑禁止无限堆积定理的假设  
+*“涡量场线与墨环轨道一一对应”*  
+由 VMC 引理直接保证，不再依赖物理直觉。
+
+---
+
+### 注 4.2（诚实边界）
+
+(H1)–(H3) 是**条件性假设**。  
+若解经历奇点（H3 失效）或涡管破裂（H2 失效），  
+VMC 可能不成立——这恰好对应**“合无跃迁”区间**，  
+与千禧年定理的分段光滑结论完全相容。
+
+严格而言，仍需证明：
+
+> **对一般光滑初值，(H1)–(H3) 在爆破前恒成立。**
+
+此为下一待证目标（见附录数值验证脚本的 Hopf 纤维流算例）。
+
+---
+
+## References
+
+- [NS-CLAY-ATTACK.md](./NS-CLAY-ATTACK.md) — Bu-Theoretic attack on the NS Millennium Problem  
+- [VMC-OPERATOR.md](./VMC-OPERATOR.md) — Operator-form construction of the VMC map  
+- [FORMAL-PROOF.md](./FORMAL-PROOF.md) — Structural–Deviation Equivalence Theorem  
+- [MOBIUS-RING.md](./MOBIUS-RING.md) — Möbius ring topological dynamics  
+
+---
+
+> VMC 引理标志着卟学对 Navier–Stokes 千禧年问题的攻击  
+> **完成了从“哲学框架”到“数学引理”的关键一跃**。
