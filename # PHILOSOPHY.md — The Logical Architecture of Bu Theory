@@ -1,0 +1,182 @@
+
+
+> **One-sentence thesis**
+> *Dialectical logic is the root; formal logic is the interface.*
+
+This document is the **philosophical foundation** of Bu Theory (卟学数论).
+It explains why the system looks contradictory from the outside, yet remains
+computationally and logically coherent once its layers are separated.
+
+This is **not** a defense of "0 = 1" as a classical identity. It is a precise
+claim about **stratified reasoning**.
+
+---
+
+## 1. The Core Principle
+
+> **Dialectical logic is the internal semantics.**
+> **Formal logic is the external interface.**
+
+Or, in structural terms:
+
+| Layer | Logic | Mathematical objects | What is allowed |
+|-------|-------|----------------------|-----------------|
+| **Internal (deep)** | Dialectical | The point-germ ϑ, internal identity `0 ≃ 1` | Contradiction as constructive tension |
+| **Boundary** | Encapsulation / Projection | The germ wall, π, residue control | No uncontrolled leakage |
+| **External (classical)** | Formal (classical first-order) | Numbers, functions, computable values | Standard arithmetic and analysis |
+
+This is **not** a rejection of formal logic.
+It is a **demotion of formal logic from "universal" to "interface-level"**.
+
+---
+
+## 2. Why Classical Logic Cannot Be the Whole Story
+
+Classical first-order logic rests on a decisive choice:
+
+> **The principle of explosion** — from a contradiction, everything follows.
+
+This makes contradiction a *fatal error state*. As a result, classical mathematics
+must forbid every structure in which `0 = 1` could arise.
+
+Bu Theory makes a different move:
+
+- It **admits** the contradiction `0 = 1`, but **only internally**, inside the
+  point-germ ϑ.
+- It **encapsulates** that contradiction using a Möbius / germ structure.
+- It **projects** the result outward through π, forgetting the internal
+  identification before it can infect classical reasoning.
+
+The contradiction is therefore **not erased**; it is **housed**.
+
+This is the exact meaning of the phrase:
+
+> *Natural laws have no forbidden zones; the forbidden zone is a design choice.*
+
+---
+
+## 3. Contradiction as a Constructive Element
+
+In dialectical logic, contradiction is not a bug report. It is **the engine of
+development**:
+
+- A point is not a static location; it is a **point-germ** carrying opposite
+  determinations.
+- The identification `0 ≃ 1` is not a collapse; it is the **minimal nontrivial
+  contradiction** from which arithmetic can unfold.
+- Projection π **sublates** (Aufheben) this contradiction into a classical value:
+  preserving its residue without preserving its explosiveness.
+
+This gives Bu Theory its two-track character:
+
+1. **Revolution** — modify the axioms at the root (zero becomes invertible,
+   `0 ≃ 1` lives inside ϑ).
+2. **Extension** — recover every classical result on the domain where π is
+   defined, via `π ∘ B = id`.
+
+Revolution happens **where π does not act**.
+Extension happens **where π is defined**.
+The two do not collide because they live on different logical layers.
+
+---
+
+## 4. Projection π as a Logical Interface
+
+The projection π is the bridge from dialectical semantics to formal semantics.
+
+It is **not** required to be a ring homomorphism, and this is intentional.
+π is an **obliviating map**: it forgets internal germ structure and returns a
+classical value. Its job is not to preserve algebraic richness, but to guarantee:
+
+1. **No leakage** — internal `0 = 1` cannot propagate outside ϑ.
+2. **Compatibility** — wherever a classical expression is defined, π returns
+   exactly that classical value.
+3. **Definiteness** — wherever classical mathematics says "undefined", Bu
+   Theory produces a definite value *internally*, while π simply does not act
+   externally.
+
+In logical terms:
+
+> π is a **partial forgetful functor** from the dialectical layer to the
+> classical layer.
+
+Calling it "not a homomorphism" is not a weakness; it is the **definition of
+the boundary**.
+
+---
+
+## 5. Historical Position
+
+Bu Theory stands in a long lineage of "local exceptions" to classical rigidity:
+
+| Tradition | Local exception | Global claim |
+|-----------|----------------|--------------|
+| Leibniz | infinitesimals | not a new arithmetic |
+| Hegel | dialectical becoming | not formalised |
+| Robinson | hyperreals | zero still has no inverse |
+| Lawvere / Kock | synthetic differential geometry | smooth only, not global |
+| Colombeau | generalized functions | products defined only up to equivalence |
+| Hadamard | finite part | a prescription, not a field |
+| **Bu Theory** | **every point is a germ** | **a globally connected arithmetic world** |
+
+Every predecessor permits a **local** crossing of the classical boundary.
+Bu Theory is the first framework to declare the boundary crossed **globally**,
+while using projection to remain compatible with classical mathematics at the
+interface.
+
+---
+
+## 6. What Bu Theory Does *Not* Claim
+
+To prevent misunderstanding, the philosophical boundaries are explicit:
+
+- ❌ It is **not** a claim that `0 = 1` in classical Boolean logic.
+- ❌ It is **not** a denial of classical arithmetic or analysis.
+- ❌ It is **not** a proof of the consistency of arithmetic.
+- ❌ It is **not** a rejection of rigor — only a relocation of where rigor
+  applies.
+
+What it **does** claim:
+
+- ✅ Classical mathematics is the **first projective layer** of a richer system.
+- ✅ Contradiction can be **encapsulated** rather than **exploded**.
+- ✅ A globally connected arithmetic can exist **without violating** the
+  classical interface wherever that interface is defined.
+
+---
+
+## 7. Status of This Document
+
+This repository is an **exploratory research programme**, not a formally
+verified treatise.
+
+The five open problems listed in `OPEN-PROBLEMS.md` are genuine:
+
+1. **ZF Model of ϑ** — can the germ be constructed as a set-theoretic object?
+2. **Projection Formalization** — can π be given a clean categorical definition?
+3. **Depth Rigor** — can generation depth support transfinite constructions?
+4. **Prime Interface** — can residual order be linked to primality?
+5. **Relative Consistency** — is there a non-trivial model of all axioms?
+
+Acknowledging these gaps is part of the philosophy:
+
+> **To declare the foundation is not to claim it is finished.**
+> **It is to state clearly where the work begins.**
+
+---
+
+## 8. One-Paragraph Summary (for citation)
+
+> Bu Theory adopts dialectical logic as its internal reasoning engine.
+> Classical formal logic is not rejected; it is demoted to an external
+> projection interface (π), where contradictions are encapsulated and do not
+> propagate. Every real point is treated as a point-germ carrying an internal
+> identification `0 ≃ 1`; the manifestation projection releases only controlled
+> residues into the classical layer. This is not a violation of logic — it is a
+> **stratification of logic itself**: dialectical at the root, formal at the
+> interface.
+
+---
+
+*Status: exploratory draft — open to criticism, not a claim of consistency proof.*
+*License: see LICENSE in this repository.*
