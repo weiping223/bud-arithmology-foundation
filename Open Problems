@@ -1,0 +1,20 @@
+
+
+1. **ZF Model of ϑ**
+   - What exactly is the carrier set Θ?
+   - How is ≃ᵩ formalized as an equivalence relation?
+
+2. **Projection Formalization**
+   - Can π be defined as a partial functor?
+   - What are the exact leakage rules?
+
+3. **Depth Rigor**
+   - Can deg be defined for transfinite constructions?
+   - Is there a non-trivial theorem using depth?
+
+4. **Prime Interface**
+   - What algebraic structure is required on ℤ_set?
+   - Can “residual order” be linked to primality at all?
+
+5. **Relative Consistency**
+   - Is there *any* non-trivial model satisfying all axioms?
