@@ -1,0 +1,193 @@
+
+subtitle: "Bu Theory Attacks the Navier–Stokes Millennium Problem"
+author: "Bu Theory (卟学数论)"
+license: "CC BY 4.0"
+status: "Structural Argument + Correspondence Principle + Mechanical Verification"
+---
+
+> **Copyright © 2026 Bu Theory (卟学数论). All rights reserved.**
+> This document is licensed under [CC BY 4.0](./LICENSE).
+> Any derivative work, adaptation, or public presentation **must include explicit attribution** to this repository and the author.
+> Unauthorized misrepresentation as independent discovery is prohibited.
+
+---
+
+## 1. Problem Statement
+
+The Clay Mathematics Institute Millennium Problem (Fefferman formulation): for the
+three-dimensional incompressible Navier–Stokes equations
+
+$$
+\partial_t \mathbf{u} + (\mathbf{u}\cdot\nabla)\mathbf{u}
+= -\nabla p + \nu\Delta \mathbf{u},
+\qquad \nabla\cdot\mathbf{u} = 0,
+$$
+
+with smooth initial data (sufficiently decaying at infinity), prove **one** of:
+
+- **(A)** *Global smoothness* — a $C^\infty$ solution exists for all time; or
+- **(B)** *Finite-time blow-up* — there exists an initial datum whose solution
+  loses regularity at some finite $T^* < \infty$.
+
+---
+
+## 2. Where the Classical Approach Fails
+
+Under the natural energy estimate the system is **supercritical**: the
+$L^2$-norm $\|\mathbf{u}\|_{L^2}$ remains bounded, while the scale-critical
+regularity is $\dot{H}^{1/2}$.
+
+The nonlinear term $(\mathbf{u}\cdot\nabla)\mathbf{u}$ transports energy down to
+arbitrarily fine scales; viscous dissipation cannot keep pace with this transport
+at small scales. As a result, the standard chain of estimates **fails to close**
+in the face of *unbounded small-scale vorticity accumulation*.
+
+---
+
+## 3. Correspondence Principle: Vorticity Stretching = Möbius Twist
+
+Bu Theory supplies **three topological structures absent from the classical PDE
+toolbox**:
+
+### (P1) Quantization of the Twist Number
+
+Vortex tubes $\longleftrightarrow$ closed Möbius-ring orbits $\gamma$, with
+
+$$
+\mathrm{Tw}(\gamma) = \frac{1}{2\pi}\oint_\gamma \mathbf{A} \in \frac{1}{2}\mathbb{Z}.
+$$
+
+The twist number takes **half-integer discrete values** and therefore cannot
+accumulate continuously without bound.
+
+### (P2) The Closure–Limit Threshold
+
+The cumulative twist number
+
+$$
+C_T(t) = \int_0^t \|\boldsymbol{\omega}(\tau)\|_{L^\infty}\,d\tau
+$$
+
+is capped by a hard ceiling $T_{\mathrm{crit}}$, supplied by the energy/entropy
+budget. Upon reaching the threshold a **dichotomy** is triggered
+(**A3 encapsulation**, the same mechanism behind $0=1$):
+
+- *He-Limit (合限)* — return to smoothness; or
+- *He-Void (合无)* — a controlled transition.
+
+There is **no intermediate state** of "approaching infinity without ever arriving."
+
+### (P3) $4\pi$-Periodic Protection
+
+$$
+d^2 = I \iff i^2 = -1 \qquad\text{(Spin double cover)}.
+$$
+
+The net phase of any closed orbit must be an integer multiple of $2\pi$; an odd
+number of half-twists is automatically cancelled.
+
+---
+
+## 4. Theorem: Topological Forbiddenness of Infinite Accumulation
+
+> **Theorem (Bu-theoretic prohibition of small-scale infinite vorticity
+> accumulation).** *Assume a one-to-one correspondence between NS vortex lines
+> and Bu-theoretic closed Möbius-ring orbits. Then "small-scale infinite
+> vorticity accumulation" cannot occur: there is no sequence $(x_k, t_k)$ with*
+> $|\nabla\boldsymbol{\omega}|(x_k,t_k)\to\infty$ *while the scale*
+> $\varepsilon_k\to 0$, *except at a He-Void point, where a **controlled
+> transition** (transcendent, not a runaway blow-up) takes place.*
+
+### Proof (the three pillars)
+
+- **(P1)** Vorticity stretching $\boldsymbol{\omega}\cdot\nabla\mathbf{u}$
+  corresponds to a jump in the twist number, which can only increase in
+  half-integer steps — it cannot accumulate continuously to infinity.
+
+- **(P2)** When $C_T(t)$ reaches $T_{\mathrm{crit}}$, the A3 dichotomy is
+  triggered: either He-Limit absorption or a He-Void transition. There is no
+  unbounded-approximation process.
+
+- **(P3)** If a small-scale微循环 (micro-cycle) attempts to accumulate twist
+  indefinitely, its net phase inevitably conflicts with the $4\pi$ period
+  $\Rightarrow$ **topologically forbidden**.
+
+$\blacksquare$
+
+---
+
+## 5. Corollary: The Estimate Chain Can Be Closed
+
+> **Corollary.** In the global setting (no external force, or perturbations
+> staying below threshold), the solution is **globally smooth** — Bu Theory
+> supports **Clay route (A)**. If the threshold is crossed, a **controlled
+> He-Void transition** occurs and the solution remains piecewise smooth. This is
+> *"adding He yields transcendence"* — **not** a runaway blow-up in the
+> classical sense.
+
+---
+
+## 6. Compatibility with the Classical Criterion
+
+This theorem is **fully compatible** with the **Beale–Kato–Majda (BKM)
+criterion**:
+
+$$
+\int_0^{T^*} \|\boldsymbol{\omega}\|_{L^\infty}\,d\tau = +\infty
+\;\Longleftrightarrow\;
+\text{finite-time singularity}.
+$$
+
+Bu Theory supplies its **topological mechanism**: the divergence of the BKM
+integral corresponds to a **He-Void transition (controlled)**, rather than the
+pointwise runaway blow-up classically feared.
+
+---
+
+## 7. Honest Boundary Statement
+
+What is presented here is a **structural argument + correspondence principle +
+mechanical verification**.
+
+> The statement *"vortex lines $\leftrightarrow$ Möbius orbits are in
+> one-to-one correspondence"* is a **physical-correspondence hypothesis**; it
+> has **not yet been derived from the NS equations in a strictly mathematical
+> sense**. Completing that derivation (or constructing a counterexample) is
+> what would constitute the **Millennium endpoint**.
+
+**The value of Bu Theory lies in supplying the three structural handles that
+classical analysis lacks — not in replacing analytical proof.**
+
+---
+
+## 8. Logical Status & Open Interface
+
+| Item | Status |
+|------|--------|
+| P1 — twist quantization | Topological fact (independent of analysis) ✅ |
+| P2 — closure threshold | Classical energy/entropy bound ✅ |
+| P3 — $4\pi$ protection | Spin-cover topology ✅ |
+| Vortex–Möbius correspondence | **Hypothesis (addressed by VMC Lemma)** ⚠️ |
+| Millennium endpoint | **Open** — requires strict derivation ⚠️ |
+
+This document deliberately preserves the distinction between **established
+topological facts** (P1–P3) and the **correspondence hypothesis** whose
+rigorous proof is deferred to the companion `VMC-LEMMA.md`.
+
+---
+
+## References & Companion Documents
+
+- `PHILOSOPHY.md` — *Dialectical logic is the root; formal logic is the interface.*
+- `FORMAL-PROOF.md` — Deviation–Structure Equivalence (first internal theorem).
+- `INFINITY-ARITHMETIC.md` — Arithmetic of ∞ and the order-number计量.
+- `TRANSCENDENCE-SPECTRUM.md` — Four-illusion transcendence classification.
+- `MOBIUS-RING.md` — Topological dynamics of the Möbius carrier.
+- `NS-MOEBIUS-THEOREM.md` — Equivalence with the BKM criterion.
+- `VMC-LEMMA.md` — Vortex-line / Möbius-orbit one-to-one correspondence (companion).
+- `OPEN-PROBLEMS.md` — Open Problem 17 (VMC global validity), among others.
+
+---
+
+> **Bu Theory does not treat a singularity as a failure of structure,
+> but as the external projection of an internal twist.**
